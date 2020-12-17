@@ -44,5 +44,4 @@ public class AnimeController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-
 }
