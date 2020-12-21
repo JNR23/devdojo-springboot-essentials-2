@@ -2,7 +2,7 @@ spring:
   application:
     name: springboot-essentials
   jpa:
-    show-sql: true
+    show-sql: false
     hibernate:
       ddl-auto: update
     properties:
@@ -14,3 +14,9 @@ spring:
     url: jdbc:mysql://localhost:3306/anime?createDatabaseIfNotExist=true
     username: root
     password: root
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
