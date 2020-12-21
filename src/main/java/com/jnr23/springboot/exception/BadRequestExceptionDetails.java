@@ -1,6 +1,5 @@
 package com.jnr23.springboot.exception;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;
 
