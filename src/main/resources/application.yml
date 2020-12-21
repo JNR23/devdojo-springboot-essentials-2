@@ -2,7 +2,7 @@ spring:
   application:
     name: springboot-essentials
   jpa:
-    show-sql: false
+    show-sql: true
     hibernate:
       ddl-auto: update
     properties:
@@ -11,19 +11,6 @@ spring:
   jmx:
     enabled: false
   datasource:
-    url: jdbc:mysql://localhost:3306/anime?allowPublicKeyRetrieval=true&sslMode=DISABLED
+    url: jdbc:mysql://localhost:3306/anime?createDatabaseIfNotExist=true
     username: root
     password: root
-
-#server:
-#error:
-#  include-stacktrace:on_param
-#
-#spring:
-#datasource:
-#  url:jdbc:mysql//localhost:3306/anime?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
-#  username:root
-#  password:root
-#jpa:
-#hibernate:
-#  ddl-auto:update
