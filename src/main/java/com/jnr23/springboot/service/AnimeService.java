@@ -1,6 +1,7 @@
 package com.jnr23.springboot.service;
 
 import com.jnr23.springboot.domain.Anime;
+import com.jnr23.springboot.exception.BadRequestException;
 import com.jnr23.springboot.mapper.AnimeMapper;
 import com.jnr23.springboot.repository.AnimeRepository;
 import com.jnr23.springboot.requests.AnimePostRequestBody;
@@ -27,9 +28,7 @@ public class AnimeService {
     }
 
     public Anime findByIdorThrowBadRequestException(long id) {
-        return animeRepository.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(
-                        HttpStatus.BAD_REQUEST, "Anime not found"));
+        return animeRepository.findById(id).orElseThrow(() -> new BadRequestException("Anime not found"));
     }
 
     public Anime save(AnimePostRequestBody animePostRequestBody) {
